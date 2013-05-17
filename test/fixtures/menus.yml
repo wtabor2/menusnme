@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rest_name: MyString
+  description: MyText
+  food_categories: 
+  image_url: MyString
+
+two:
+  rest_name: MyString
+  description: MyText
+  food_categories: 
+  image_url: MyString
