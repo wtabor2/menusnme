@@ -11,3 +11,27 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+.container {
+    padding-top: 40px;
+}
+
+.navbar-search {
+    padding-right: 10px;
+}
+
+.nav_title  {
+    padding-left: 10px;
+}
+
+.nav_title a hover{
+    background: CC0000;
+}
+
+
+.footer {
+    border-top: solid 1px #F0F0F0;
+    background: #FAFAFA;
+}
