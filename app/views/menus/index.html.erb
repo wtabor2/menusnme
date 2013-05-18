@@ -15,16 +15,14 @@
           
             
               <% @menus.each do |menu| %>
-              
+              <div clas="menu_iteration">
                 <tr>
                   <td><%= link_to menu.rest_name, menu %></td>
                   <td><%= menu.description %></td>
                   <td><%= menu.food_categories %></td>
-                  <% if menu.image_url != nil %>
                   <td><img src="/assets/<%= menu.image_url %>"/></td>
-                  <% end %>
                 </tr>
-               
+              </div>
               <% end %>
             
           </table>
@@ -34,8 +32,17 @@
       
     <div class="span2">
         <div class="sidebar">
-          <div class="well">
-            <img src="/assets/pizza_joint_logo.png"/>
+          <div class="sidebar-well">
+            <div class="sidebar_title">
+              Quick Links
+            </div>
+            <div class="sidebar_list">
+              <ul>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+              </ul>
+            </div>
           </div>
         </div>
     </div>  
@@ -45,4 +52,4 @@
 
 <br />
 
-<%= link_to 'New Menu', new_menu_path %>
+<%= link_to 'New Menu', new_menu_path, class: 'btn btn-inverse'%>

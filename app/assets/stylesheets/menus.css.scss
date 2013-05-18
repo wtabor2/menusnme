@@ -10,6 +10,7 @@ body {
     background-color: #0000cc;
 }
 
+
 .menu_table {
     padding: 20px;
 }
@@ -23,10 +24,19 @@ body {
     padding: 10px;
     background: #FAFAFA;
     
-}
+} 
 
 .menu_table a:hover {
     background: none;
     text-decoration: underline;
     color: #777777;
+}
+
+.sidebar_title{
+    border-bottom: solid 1px #CCC;
+    padding-bottom: 5px;
+}
+
+.sidebar_list{
+    padding-top: 5px;
 }
