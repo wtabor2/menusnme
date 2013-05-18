@@ -1,29 +1,32 @@
-<h1>Listing menus</h1>
+<h1>Menu Listing</h1>
 
   <div class="row-fluid">
-    <div class="span9">
+    <div class="span10">
       
       <div class="menu_table">
         
-          <table>
+          <table class="menus">
             <tr>
-              <th>Rest name</th>
+              <th>Restaurant</th>
               <th>Description</th>
               <th>Food categories</th>
               <th>Image url</th>
             </tr>
           
+            
               <% @menus.each do |menu| %>
+              
                 <tr>
-                  <td><%= menu.rest_name %></td>
+                  <td><%= link_to menu.rest_name, menu %></td>
                   <td><%= menu.description %></td>
                   <td><%= menu.food_categories %></td>
-                  <td><%= menu.image_url %></td>
-                  <td><%= link_to 'Show', menu %></td>
-                  <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
-                  <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <% if menu.image_url != nil %>
+                  <td><img src="/assets/<%= menu.image_url %>"/></td>
+                  <% end %>
                 </tr>
+               
               <% end %>
+            
           </table>
         
       </div>
@@ -32,7 +35,7 @@
     <div class="span2">
         <div class="sidebar">
           <div class="well">
-            Sidebar text
+            <img src="/assets/pizza_joint_logo.png"/>
           </div>
         </div>
     </div>  

@@ -2,6 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1{
+    color: #c4c4c4;
+}
+
+body {
+    background-color: #0000cc;
+}
+
 .menu_table {
-    padding-bottom: 20px;
+    padding: 20px;
+}
+
+.menus tr{
+    border-bottom: solid 1px #CCC;
+    padding: 10px;
+}
+
+.menus td{
+    padding: 10px;
+    background: #FAFAFA;
+    
+}
+
+.menu_table a:hover {
+    background: none;
+    text-decoration: underline;
+    color: #777777;
 }
