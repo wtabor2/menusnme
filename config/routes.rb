@@ -1,9 +1,24 @@
 Menusnme::Application.routes.draw do
+  
   resources :menus
   
   root to: 'menus#index'
 
 
+  devise_for :users
+  
+  devise_scope :user do
+    get 'register', to: 'devise/registrations#new', as: :register
+    get 'login', to: 'devise/sessions#new', as: :login
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+  end
+  
+  #Profiles Controller
+  #get '/:id', to: 'profiles#show', as: :user_show
+  
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
