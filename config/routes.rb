@@ -3,6 +3,7 @@ Menusnme::Application.routes.draw do
   resources :menus
   
   root to: 'menus#index'
+  get 'home', to: 'menus#index', as: :home
 
 
   devise_for :users
@@ -17,8 +18,7 @@ Menusnme::Application.routes.draw do
   #get '/:id', to: 'profiles#show', as: :user_show
   
   
-  
-  
+   
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
