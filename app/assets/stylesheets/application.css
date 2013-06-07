@@ -12,19 +12,28 @@
  *= require_tree .
  */
 
-body {
-    background-color: #0000cc;
-    background: #0000cc;
-    color: #0000cc;
-}
 
 .container {
-    padding-top: 40px;
+    padding-top: 50px;
     padding-bottom: 10px;
 }
 
+.alert {
+    padding-top: 10px; 
+}
+
+.login-button a:visited{
+    color: #ffffff;
+}
+
+.login-button a:hover{
+    text-decoration: none;
+}
+
+
 .navbar-search {
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 .nav_title  {
@@ -36,3 +45,4 @@ body {
     border-top: solid 1px #F0F0F0;
     background: #FAFAFA;
 }
+
