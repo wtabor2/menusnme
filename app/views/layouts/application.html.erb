@@ -13,54 +13,38 @@
       <div class="nav_title">
         <a class ="brand" href="/home">Menus N' Me</a>
       </div>
+      <% if user_signed_in? %>
+      <% else %>
       <ul class="nav">
         <li><%= link_to "Sign Up", register_path%></li>
       </ul>
+      <% end %>
       
-      
-  <form class="navbar-search pull-right">
+    <form class="navbar-search pull-right">
         <input type="text" class="search-query" placeholder="Search">
-  </form>    
-  
-  
-    
+    </form>
   
     <div class="btn-group pull-right">
       <% if user_signed_in? %>
-      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Hi, <%= current_user.first_name %> <span class="caret"></span></button>
+      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Hi, <%= current_user.first_name %></button>
         <ul class="dropdown-menu">
           <li><a href="#">My Menus</a></li>
           <li><%= link_to 'Edit User', edit_user_registration_path %></li>
           <li class="divider"></li>
           <li><%= link_to 'Log Out', logout_path %></li>
         </ul>
-        <% else %>
+      <% else %>
           <div class="login-button">
             <button class="btn btn-primary">
-          
-            <%= link_to 'Log In', login_path %>
-          
+              <%= link_to 'Log In', login_path %>
             </button>
           </div>
       <% end %>
     </div>
-  
-      
-    
 
-    
-    
-    
-      
-      
-      
     </div>
   </div>
-  
- 
 
-  
-      
   <div class="container">
     
     <% flash.each do |type, message| %>
@@ -74,16 +58,9 @@
     
   </div>
   
-   
   
-    
   <div class="footer">
     This is the footer
-    <% if user_signed_in? %>
-    <p><%= current_user.first_name %>
-    <% else %>
-      <p>Not Signed In
-    <% end %>
   </div>
 
 

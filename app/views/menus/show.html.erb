@@ -1,25 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Rest name:</b>
+<h1>
   <%= @menu.rest_name %>
-</p>
+</h1>
 
-<p>
-  <b>Description:</b>
-  <%= @menu.description %>
-</p>
+<div class="row ">
+    <div class="span4 offset2">
+    <img src="/assets/<%= @menu.image_url %>"/>
+  </div>
+  <div class="span4">
+    <%= @menu.description %>
+  </div>
+  <div class="span2">
+    <h2>Categories</h2>
+      <%= @menu.food_categories %>
+  </div>
+</div>
 
-<p>
-  <b>Food categories:</b>
-  <%= @menu.food_categories %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%= @menu.image_url %>
-</p>
+<%= link_to 'Edit', edit_menu_path(@menu) %>
+  
 
 
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
