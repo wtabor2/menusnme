@@ -30,4 +30,11 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  
+  
 <% end %>
+
+  <% @category.each do |cat| %>
+    <p>- <%= cat.name %>
+  <% end %>
+  <p>

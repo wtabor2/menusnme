@@ -14,6 +14,8 @@ Menusnme::Application.routes.draw do
     get 'logout', to: 'devise/sessions#destroy', as: :logout
   end
   
+  resources :categories
+  
   #Profiles Controller
   #get '/:id', to: 'profiles#show', as: :user_show
   

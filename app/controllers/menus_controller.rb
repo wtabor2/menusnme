@@ -25,6 +25,7 @@ class MenusController < ApplicationController
   # GET /menus/new.json
   def new
     @menu = Menu.new
+    @category = Category.all
 
     respond_to do |format|
       format.html # new.html.erb
