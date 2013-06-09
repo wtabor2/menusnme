@@ -1,5 +1,21 @@
 <h1>New menu</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="span4">
+    <%= render 'form' %>
+  </div>
+  
+  <div class="span4">
+    <h3>Categories</h3>
+    
+    <div class="categories well">
+      <% @category.each do |cat| %>
+        <p><%= cat.name %>
+      <% end %>
+    </div>
+    
+  </div>
+</div>
+
 
 <%= link_to 'Back', menus_path %>
