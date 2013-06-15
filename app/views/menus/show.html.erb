@@ -13,7 +13,15 @@
   </div>
   <div class="span2">
     <h2>Categories</h2>
-      <%= @menu.food_categories %>
+      <strong>food categoreis </strong>
+      <p><%= @menu.food_categories %>
+      <p>
+      <p><strong>category from relationship table</strong>
+      <p>
+      <% @menu.categories.each do |cat| %>
+      <%= cat.name %>
+      <% end %>     
+  
   </div>
 </div>
 

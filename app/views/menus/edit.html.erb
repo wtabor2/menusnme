@@ -1,6 +1,21 @@
 <h1>Editing menu</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="span4">
+    <%= render 'form' %>
+  </div>
+  
+  <div class="span4">
+    <h3>Categories</h3>
+    
+    <div class="categories well">
+      <% @category.each do |cat| %>
+        <p><button type="button" class="btn btn-cat" data-toggle="button"><%= cat.name %></button>
+      <% end %>
+    </div>
+    
+  </div>
+</div>
 
 <%= link_to 'Show', @menu %> |
 <%= link_to 'Home', menus_path %>  |

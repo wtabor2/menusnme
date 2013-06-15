@@ -1,5 +1,6 @@
 class Category < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :menu_ids
   
-  belongs_to :menu
+  has_and_belongs_to_many :menus
+  
 end

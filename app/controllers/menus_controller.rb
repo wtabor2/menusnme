@@ -36,6 +36,7 @@ class MenusController < ApplicationController
   # GET /menus/1/edit
   def edit
     @menu = Menu.find(params[:id])
+    @category = Category.all
   end
 
   # POST /menus

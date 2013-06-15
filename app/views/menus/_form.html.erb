@@ -27,9 +27,15 @@
     <%= f.label :image_url %><br />
     <%= f.text_field :image_url %>
   </div>
+
+
+
+  <p><%= f.collection_check_boxes :category_ids, Category.all,  :id, :name %>
+
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>
-  
-  
+    
 <% end %>

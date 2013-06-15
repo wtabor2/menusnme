@@ -1,5 +1,6 @@
 class Menu < ActiveRecord::Base
-  attr_accessible :description, :food_categories, :image_url, :rest_name
+  attr_accessible :description, :food_categories, :image_url, :rest_name, :category_ids
   
-  has_many :categories
+  has_and_belongs_to_many :categories
+  
 end

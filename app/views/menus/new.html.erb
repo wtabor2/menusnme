@@ -10,12 +10,16 @@
     
     <div class="categories well">
       <% @category.each do |cat| %>
-        <p><%= cat.name %>
+      <p><button type="button" class="btn btn-cat" data-toggle="button"><%= cat.name %></button>
       <% end %>
     </div>
     
   </div>
 </div>
+
+<% @category.each do |cat| %>
+      <%= cat.to_yaml %>
+      <% end %>
 
 
 <%= link_to 'Back', menus_path %>
