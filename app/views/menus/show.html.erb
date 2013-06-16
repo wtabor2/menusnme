@@ -32,7 +32,7 @@
 <div class="row">
   <div class="span8">
     <div class="categories-list">
-      <strong>Categories:</strong> <% @menu.categories.each do |cat| %> | <%= cat.name %> <% end %>|
+      <strong>Categories:</strong> <% @menu.categories.each do |cat| %> | <%= link_to cat.name, cat %><% end %>|
     </div>    
   </div>
 </div>

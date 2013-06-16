@@ -4,10 +4,12 @@
     <div class="span10">
       
       <div class="category_table">
-        <h4>Category</h4>
-          <% @category.each do |cat| %>
-            <p>- <%= cat.name %>
-          <% end %>
+        <% @category.each do |cat| %>
+          <dl>
+          <dt><%= cat.name %>
+             <% cat.menus.each do |m| %> <dd><%= m.rest_name %> <% end %>
+          </dl>
+        <% end %>
       </div>
     </div>  
       

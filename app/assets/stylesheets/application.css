@@ -22,6 +22,10 @@
     padding-top: 10px; 
 }
 
+.login-button a{
+    color: #ffffff;
+}
+
 .login-button a:visited{
     color: #ffffff;
 }
@@ -29,7 +33,6 @@
 .login-button a:hover{
     text-decoration: none;
 }
-
 
 .navbar-search {
     padding-right: 10px;
