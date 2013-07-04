@@ -6,7 +6,9 @@ Menusnme::Application.routes.draw do
   get 'home', to: 'menus#index', as: :home
 
 
-  devise_for :users
+  devise_for :users, :controllers => {:sessions => "users/sessions"}
+  
+  
   
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register
@@ -18,6 +20,7 @@ Menusnme::Application.routes.draw do
   
   #Profiles Controller
   #get '/:id', to: 'profiles#show', as: :user_show
+  
   
   
    

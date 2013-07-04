@@ -4,9 +4,11 @@
       <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
 
       <ul>
+      
       <% @menu.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
+      
       </ul>
     </div>
   <% end %>
@@ -28,12 +30,8 @@
     <%= f.text_field :image_url %>
   </div>
 
-
-
   <p><%= f.collection_check_boxes :category_ids, Category.all,  :id, :name %>
-
-  
-  
+   
   <div class="actions">
     <%= f.submit %>
   </div>
