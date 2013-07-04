@@ -1,5 +1,7 @@
 Menusnme::Application.routes.draw do
   
+  get "profiles/show"
+
   resources :menus
   
   root to: 'menus#index'
@@ -7,19 +9,19 @@ Menusnme::Application.routes.draw do
 
 
   devise_for :users, :controllers => { :sessions => "users/sessions" }
-  
+
   
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register
     get 'login', to: 'devise/sessions#new', as: :login
     get 'logout', to: 'devise/sessions#destroy', as: :logout
-    get 'user/edit', to: 'users/sessions#edit', as: :edit
+    get 'users/sessions/edit', to: 'users/sessions#edit', as: :edit
   end
   
   resources :categories
   
   #Profiles Controller
-  #get '/:id', to: 'profiles#show', as: :user_show
+  #get '/:id', to: 'users/sessions#show'#, as: :user_show
   
   
   

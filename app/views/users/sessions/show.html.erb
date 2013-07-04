@@ -1,0 +1,41 @@
+<h1>
+  <%= @user.profile_name %>
+</h1>
+
+<div class="row">
+    <div class="span4">
+    
+  </div>
+  <div class="span4">
+    First Name: <%= @user.first_name %>
+    Last Name: <%= @user.last_name %>
+  </div>
+  <div class="span2">
+     <div class="sidebar">
+          <div class="sidebar-well">
+            <div class="sidebar_title">
+              Quick Links
+            </div>
+            <div class="sidebar_list">
+              <ul>
+                <li><%= link_to 'Edit User', edit_user_registration_path %></li>
+                <li><%= link_to 'Log In', login_path %></li>
+                <li><%= link_to 'Log Out', logout_path %></li>
+                <li><%= link_to 'New Category', new_category_path %></li>
+                <li><%= link_to 'Category Index', categories_path %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <div class="categories-list">
+      <!--<strong>Menus:</strong> <% @user.menus.each do |m| %> | <%= link_to m.rest_name, m %><% end %>|-->
+    </div>    
+  </div>
+</div>
+
+
