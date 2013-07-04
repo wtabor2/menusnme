@@ -26,6 +26,18 @@
               <% end %>
             
           </table>
+
+          <div class="well"> <!--change this to menus well during css -->
+            <% @menus.each do |m| %>
+             <p><button type="button" class="btn btn-cat" data-toggle="button"><%= m.rest_name %></button>
+            <% end %>
+          </div>
+
+
+
+
+
+
         
       </div>
     </div>  
@@ -38,7 +50,7 @@
             </div>
             <div class="sidebar_list">
               <ul>
-                <li><%= link_to 'Edit User', edit_user_registration_path %></li>
+                <li><%= link_to 'Edit User', edit_path %></li>
                 <li><%= link_to 'Log In', login_path %></li>
                 <li><%= link_to 'Log Out', logout_path %></li>
                 <li><%= link_to 'New Category', new_category_path %></li>

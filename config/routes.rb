@@ -6,14 +6,14 @@ Menusnme::Application.routes.draw do
   get 'home', to: 'menus#index', as: :home
 
 
-  devise_for :users, :controllers => {:sessions => "users/sessions"}
-  
+  devise_for :users, :controllers => { :sessions => "users/sessions" }
   
   
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register
     get 'login', to: 'devise/sessions#new', as: :login
     get 'logout', to: 'devise/sessions#destroy', as: :logout
+    get 'user/edit', to: 'users/sessions#edit', as: :edit
   end
   
   resources :categories

@@ -26,12 +26,6 @@
     <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
       <%= f.password_field :current_password %>
     </div>
-    
-    <div class="categories well"> <!--change this to menus well during css -->
-      <% @menu.each do |m| %>
-        <p><button type="button" class="btn btn-cat" data-toggle="button"><%= m.name %></button>
-      <% end %>
-    </div>
   
 
     <div><%= f.submit "Update" %></div>

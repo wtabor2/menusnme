@@ -13,7 +13,7 @@ class Users::SessionsController < Devise::SessionsController
   
   # GET /menus/1/edit
   def edit
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
     @menu = Menu.all
   end
   
