@@ -28,7 +28,7 @@
       <% if user_signed_in? %>
       <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Hi, <%= current_user.first_name %></button>
         <ul class="dropdown-menu">
-          <li><a href="#">My Menus</a></li>
+          <li><a href="/<%= current_user.profile_name %>">My Menus</a></li>
           <li><%= link_to 'Edit User', edit_user_registration_path %></li>
           <li class="divider"></li>
           <li><%= link_to 'Log Out', logout_path %></li>

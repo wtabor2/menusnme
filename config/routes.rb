@@ -1,6 +1,6 @@
 Menusnme::Application.routes.draw do
   
-  get "profiles/show"
+  
 
   resources :menus
   
@@ -21,7 +21,8 @@ Menusnme::Application.routes.draw do
   resources :categories
   
   #Profiles Controller
-  #get '/:id', to: 'users/sessions#show'#, as: :user_show
+  get "profiles/show"
+  get '/:id', to: 'profiles#show'
   
   
   

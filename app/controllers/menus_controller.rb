@@ -14,7 +14,12 @@ class MenusController < ApplicationController
   # GET /menus/1.json
   def show
     @menu = Menu.find(params[:id])
-
+    @user = User.find_by_profile_name(params[:id])
+    
+    def like_menu
+      @user.add_menu(@menu)
+    end 
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @menu }
