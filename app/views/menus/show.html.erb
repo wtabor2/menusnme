@@ -8,11 +8,16 @@
   </div>
   <div class="span4">
     <%= @menu.description %>
-    <div class="like-button">
-      <%= button_to 'Like Me ERB', :action => 'show', :id => current_user.menus%>
-      <button type="button" class="btn btn-cat" data-toggle="button"><a href="#">Like Me HTML</a></button>
-      <p><%=current_user.full_name%>
-    </div>
+
+<% if user_signed_in? %>
+      <div class="like-button">
+        <%= button_to 'Like Me ERB', :action => 'show',  :id => current_user.menus %>
+        <p><%=current_user.full_name%>
+      </div>
+
+    <button type="button" class="btn btn-cat" data-toggle="button"><a href="#">Like Me HTML</a></button>
+<% end %>
+
   </div>
   <div class="span2">
      <div class="sidebar">
