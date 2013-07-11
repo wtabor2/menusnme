@@ -11,11 +11,13 @@
 
 <% if user_signed_in? %>
       <div class="like-button">
-        <%= button_to 'Like Me ERB', :action => 'show',  :id => current_user.menus %>
+        <%= button_to 'Like Me ERB', :action => 'like',  :id => current_user.menu_ids %>
         <p><%=current_user.full_name%>
       </div>
 
     <button type="button" class="btn btn-cat" data-toggle="button"><a href="#">Like Me HTML</a></button>
+    
+
 <% end %>
 
   </div>

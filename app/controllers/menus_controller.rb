@@ -16,9 +16,6 @@ class MenusController < ApplicationController
     @menu = Menu.find(params[:id])
     @user = User.find_by_profile_name(params[:id])
     
-    def like_menu
-      @user.add_menu(@menu)
-    end 
     
     respond_to do |format|
       format.html # show.html.erb
@@ -52,11 +49,27 @@ class MenusController < ApplicationController
 
     respond_to do |format|
       if @menu.save
-        format.html { redirect_to @menu, notice: 'Menu was successfully created.' }
+        format.html { redirect_to @menu, notice: 'CREATE Menu was successfully created.' }
         format.json { render json: @menu, status: :created, location: @menu }
       else
         format.html { render action: "new" }
         format.json { render json: @menu.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
+  # POST /like
+  # POST /like.json
+  def like
+    @menu = Menu.find(params[:id])
+    @user = User.find_by_profile_name(params[:id])
+
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to @menu, notice: 'Menu was successfully liked.' }
+        format.json { head :no_content }
+      else
+        render file: 'public/404', status: 404, formats: [:html]
       end
     end
   end
@@ -68,7 +81,7 @@ class MenusController < ApplicationController
 
     respond_to do |format|
       if @menu.update_attributes(params[:menu])
-        format.html { redirect_to @menu, notice: 'Menu was successfully updated.' }
+        format.html { redirect_to @menu, notice: 'UPDATE Menu was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

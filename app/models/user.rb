@@ -27,9 +27,5 @@ class User < ActiveRecord::Base
   end
   
   
-  def add_menu(menu)
-    :menu_ids << menu
-  end
-  
   
 end
