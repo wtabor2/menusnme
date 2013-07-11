@@ -64,12 +64,12 @@ class MenusController < ApplicationController
     @menu = Menu.find(params[:id])
     @user = User.find_by_profile_name(params[:id])
 
+    @menu.user_ids << @user_id
+    
     respond_to do |format|
-      if @user.save
+      if @menu.update_attributes(params[:menu])
         format.html { redirect_to @menu, notice: 'Menu was successfully liked.' }
         format.json { head :no_content }
-      else
-        render file: 'public/404', status: 404, formats: [:html]
       end
     end
   end

@@ -11,7 +11,7 @@
 
 <% if user_signed_in? %>
       <div class="like-button">
-        <%= button_to 'Like Me ERB', :action => 'like',  :id => current_user.menu_ids %>
+        <%= button_to 'Like Me ERB', :action => 'like',  :id => @menu.id %>
         <p><%=current_user.full_name%>
       </div>
 

@@ -6,7 +6,8 @@ Menusnme::Application.routes.draw do
   
   root to: 'menus#index'
   get 'home', to: 'menus#index', as: :home
-  post 'like', to: 'menus#like', as: :like
+  get 'menus/:id/like', to: 'menus#like', as: :like
+  post 'menus/:id/like', to: 'menus#like', as: :like
 
 
   devise_for :users, :controllers => { :sessions => "users/sessions" }
