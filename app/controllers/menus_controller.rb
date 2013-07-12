@@ -62,12 +62,11 @@ class MenusController < ApplicationController
   # POST /like.json
   def like
     @menu = Menu.find(params[:id])
-    @user = User.find_by_profile_name(params[:id])
+    @user = User.find(params[:id])
 
-    @menu.user_ids << @user_id
     
     respond_to do |format|
-      if @menu.update_attributes(params[:menu])
+      if @user.update_attributes(params[:user])
         format.html { redirect_to @menu, notice: 'Menu was successfully liked.' }
         format.json { head :no_content }
       end

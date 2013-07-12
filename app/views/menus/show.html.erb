@@ -11,12 +11,16 @@
 
 <% if user_signed_in? %>
       <div class="like-button">
-        <%= button_to 'Like Me ERB', :action => 'like',  :id => @menu.id %>
-        <p><%=current_user.full_name%>
+        <%= button_to 'Like Me ERB', :action => 'like',  :id => current_user.id %>
       </div>
-
-    <button type="button" class="btn btn-cat" data-toggle="button"><a href="#">Like Me HTML</a></button>
     
+    <%= simple_form_for(current_user,:url => registration_path(current_user)) do |f| %>
+     <%=f.association :menus, label_method: :rest_name, as: :check_boxes %>
+     <%=f.submit 'Like' %>
+    <%end%>
+    
+    <p><strong>User's That This Restaurant Likes:</strong>
+      <p><% @menu.users.each do |user| %> | <%= user.full_name %><% end %>|
 
 <% end %>
 

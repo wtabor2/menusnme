@@ -4,15 +4,15 @@
 
 <div class="row">
     <div class="span4">
-    <% @user.menus.each do |m| %>
-      <%= m.rest_name %>
+
+    <p><% @user.menus.each do |m| %>
+      <p><%= m.rest_name %>
     <% end %>
+
   
   </div>
   <div class="span4">
-    First Name: <%= @user.first_name %>
-    Last Name: <%= @user.last_name %>
-    <%= @user.to_yaml %>
+    Place Holder
   </div>
   <div class="span2">
      <div class="sidebar">
